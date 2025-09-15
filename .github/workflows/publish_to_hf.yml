@@ -6,9 +6,16 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v5
+
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v6
         with:
           version: "latest"
+      - name: Install the latest version of uv and activate the environment
+        uses: astral-sh/setup-uv@v6
+        with:
+          activate-environment: true
+      - run: uv pip install pip
+
       - run: uv run process.py
       - run: uv run publish.py
