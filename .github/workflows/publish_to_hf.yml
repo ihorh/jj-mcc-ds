@@ -19,3 +19,5 @@ jobs:
 
       - run: uv run process.py
       - run: uv run publish.py
+        env:
+            HF_TOKEN: ${{ secrets.HF_TOKEN }}
