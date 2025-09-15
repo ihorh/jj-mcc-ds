@@ -1,5 +1,5 @@
 name: Publish Data Set to Hugging Face
-on: []
+on: [workflow_dispatch]
 jobs:
   Transform_and_Publish:
     runs-on: ubuntu-latest
