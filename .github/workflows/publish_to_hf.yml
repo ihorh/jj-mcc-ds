@@ -4,6 +4,8 @@ jobs:
   Transform_and_Publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v6
         with:
